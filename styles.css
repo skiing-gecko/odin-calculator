@@ -1,7 +1,16 @@
+* {
+    font-family: Monaco, Monospaced, sans-serif;
+}
+
+body {
+    background-color: #edede9;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 64px;
 }
 
 .calculator {
@@ -9,19 +18,28 @@
     flex-direction: column;
     align-items: center;
     width: 320px;
-    height: 512px;
+    height: 448px;
     background-color: #263238;
     border-radius: 32px;
+    box-shadow: 0 5px 16px #333;
 }
 
 .screen {
-    height: 128px;
+    height: 96px;
     width: 288px;
     margin-top: 16px;
     background-color: #37474F;
     border-radius: 16px;
-    /*border: 4px solid black;*/
-    /*flex: 0 0 100%;*/
+    display: flex;
+    justify-content: end;
+}
+
+#display-numbers {
+    color: #ECEFF1;
+    margin: 0 12px 20px 0;
+    line-height: 32px;
+    font-size: 54px;
+    align-self: flex-end;
 }
 
 .button-row {
@@ -55,6 +73,20 @@
 
 .button.button-clear {
     background-color: #FF5722;
+    padding-left: 4px;
+    padding-right: 4px;
+    flex: 2;
+}
+
+.button-copy, .button-backspace {
+    background-color: #ECEFF1;
+}
+
+.icon {
+    display: block;
+    margin: auto;
+    width: 36px;
+    height: 36px;
 }
 
 .button.button-operator.button-equals {
@@ -89,15 +121,15 @@
     background-color: #E64A19;
 }
 
-.button.button-operator.button-equals:hover {
+.button.button-backspace:hover, .button.button-copy:hover, .button.button-operator.button-equals:hover {
     background-color: #CFD8DC;
 }
 
-.button.button-operator.button-equals:active {
+.button.button-backspace:active, .button.button-copy:active, .button.button-operator.button-equals:active {
     background-color: #B0BEC5;
 }
 
-.spacing {
-    flex: 1;
-    margin: 4px;
+.button:disabled {
+    cursor: default;
+    background-color: #555;
 }
