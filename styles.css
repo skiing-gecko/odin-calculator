@@ -73,9 +73,7 @@ body {
 
 .button.button-clear {
     background-color: #FF5722;
-    padding-left: 4px;
-    padding-right: 4px;
-    flex: 2;
+    flex: 1;
 }
 
 .button-copy, .button-backspace {
